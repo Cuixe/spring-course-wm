@@ -6,5 +6,5 @@ import com.walmart.api.cupon.entry.Cupon;
 
 public interface CuponRepository extends JpaRepository<Cupon, String> {
 
-
+	Cupon findByCuponCode(String cuponCode);
 }

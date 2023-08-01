@@ -34,4 +34,9 @@ public class CuponController {
 	public List<Cupon> findAll() {
 		return repository.findAll();
 	}
+	
+	@GetMapping("/findByCuponCode/{cuponCode}")
+	public Cupon findByCuponCode(@PathVariable("cuponCode") String cuponCode) {
+		return repository.findByCuponCode(cuponCode);
+	}
 }
