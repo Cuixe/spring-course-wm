@@ -12,7 +12,7 @@ public class ProcessorFilter implements GlobalFilter{
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-		System.out.println("In processor filter, doing something ");
+		System.out.println("In processor filter, doing something " + exchange.getRequest().getPath());
 		return chain.filter(exchange);
 	}
 
