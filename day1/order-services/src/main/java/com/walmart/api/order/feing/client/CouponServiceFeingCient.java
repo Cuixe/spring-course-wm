@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.walmart.api.order.rest.response.CouponResponse;
 
-@FeignClient(name="coupon-services")
+@FeignClient(name="api-gateway")
 public interface CouponServiceFeingCient {
 	
-	@GetMapping("/api/cupon/cuponCode/{cuponCode}")
+	@GetMapping("coupon-services/api/coupon/couponCode/{cuponCode}")
 	CouponResponse getCouponCode(@PathVariable("cuponCode") String cuponCode);
 	
 }

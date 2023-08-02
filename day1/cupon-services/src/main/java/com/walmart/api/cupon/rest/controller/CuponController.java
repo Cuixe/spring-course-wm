@@ -14,7 +14,7 @@ import com.walmart.api.cupon.entry.Cupon;
 import com.walmart.api.cupon.repository.CuponRepository;
 
 @RestController
-@RequestMapping("/api/cupon")
+@RequestMapping("/api/coupon")
 public class CuponController {
 	
 	@Autowired
@@ -35,7 +35,7 @@ public class CuponController {
 		return repository.findAll();
 	}
 	
-	@GetMapping("/cuponCode/{cuponCode}")
+	@GetMapping("/couponCode/{cuponCode}")
 	public Cupon findByCuponCode(@PathVariable("cuponCode") String cuponCode) {
 		return repository.findByCuponCode(cuponCode);
 	}
